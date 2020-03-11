@@ -1,15 +1,21 @@
-Input is read from stdin and consists of an arbitrary number of words i.e. columns of text. Each column has the length i.e. all words contain the same number of characters. Characters can be either lowercase or uppercase.
+All black pixels ("#") are considered to be part of the sky, and each white pixel is considered to be part of a star. White pixels ("-") that are adjacent vertically or horizontally are part of the same star.
 
-Output is the same set of columns but sorted alphabetically (ignoring case).
+Output should be how many stars are found
 
-example:
+Example:
 
 $ cat stdin.txt
-oTs
-nwi
-eox
+10 20
+#################---
+##-###############--
+#---################
+##-#################
+########---#########
+#######-----########
+########---#########
+##################--
+#################---
+##################-#
 
-$ python3 sideways_122.py < stdin.txt
-osT
-niw
-exo
+$ python3 stars_122.py < stdin.txt
+4
